@@ -30,7 +30,8 @@ banner= """
 print(banner)
 
 parser = argparse.ArgumentParser(description="xPosed parses text logs for IP addresses and \
-    adds a deny rule to UFW if the IP is seen more than the user defined number of allowed times.", \
+    adds a deny rule to UFW if the IP is seen more than the user defined number of allowed times. \
+    Can also run a custom command instead of modifying the firewall.", \
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument("-m", "--mode", type=str, default="deny", help="Set the mode to create either deny or allow rules. Map mode uses scapy to passively map the network.")
 parser.add_argument("-l", "--logfile", type=str, required=True, help="Path to logfile to parse.")
